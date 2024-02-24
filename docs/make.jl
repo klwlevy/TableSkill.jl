@@ -5,10 +5,13 @@ makedocs(
     sitename = "TableSkill",
     format = Documenter.HTML(),
     modules = [TableSkill],
-    remotes = nothing,
+    #remotes = nothing,
+    repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
+    #remotes = GitHub("github.com/klwlevy/TableSkill.git"),
     #remotes = "klwlevy.github.io/TableSkill/",
     #repo = "https://klwlevy.github.io/TableSkill/",
-    #repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
+    #remotes = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
+    #repo = "https://klwlevy.github.io/TableSkill/",
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.
@@ -16,6 +19,7 @@ makedocs(
 # for more information.
 #=
     deploydocs(
-        #repo = "github.com/klwlevy/TableSkill.git"
+        repo = "github.com/klwlevy/TableSkill.git",
+        #repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
     )
 =#
