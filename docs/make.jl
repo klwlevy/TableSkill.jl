@@ -6,6 +6,8 @@ makedocs(
     format = Documenter.HTML(),
     modules = [TableSkill],
     remotes = nothing,
+    #remotes = "klwlevy.github.io/TableSkill/",
+    #repo = "https://klwlevy.github.io/TableSkill/",
     #repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
 )
 
@@ -14,6 +16,6 @@ makedocs(
 # for more information.
 #=
     deploydocs(
-        repo = "github.com/klwlevy/TableSkill.git"
+        #repo = "github.com/klwlevy/TableSkill.git"
     )
 =#
