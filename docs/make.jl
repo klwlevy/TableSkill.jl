@@ -1,25 +1,25 @@
-using Documenter
 using TableSkill
+using Documenter
 
-makedocs(
-    sitename = "TableSkill",
-    format = Documenter.HTML(),
-    modules = [TableSkill],
-    #remotes = nothing,
-    repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
-    #remotes = GitHub("github.com/klwlevy/TableSkill.git"),
-    #remotes = "klwlevy.github.io/TableSkill/",
-    #repo = "https://klwlevy.github.io/TableSkill/",
-    #remotes = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
-    #repo = "https://klwlevy.github.io/TableSkill/",
+DocMeta.setdocmeta!(TableSkill, :DocTestSetup, :(using TableSkill); recursive=true)
+
+makedocs(;
+    modules=[TableSkill],
+    authors="Walter Levy <klwlevy@hotmail.com> and contributors",
+    sitename="TableSkill.jl",
+    format=Documenter.HTML(;
+        canonical="https://klwlevy.github.io/TableSkill.jl",
+        edit_link="master",
+        assets=String[],
+    ),
+    pages=[
+        "Home" => "index.md",
+    ],
 )
 
-# Documenter can also automatically deploy documentation to gh-pages.
-# See "Hosting Documentation" and deploydocs() in the Documenter manual
-# for more information.
 #=
-    deploydocs(
-        repo = "github.com/klwlevy/TableSkill.git",
-        #repo = Documenter.Remotes.GitHub("klwlevy", "TableSkill"),
-    )
+deploydocs(;
+    repo="github.com/klwlevy/TableSkill.jl",
+    devbranch="master",
+)
 =#
