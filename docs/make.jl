@@ -17,9 +17,7 @@ makedocs(;
     ],
 )
 
-#=
 deploydocs(;
     repo="github.com/klwlevy/TableSkill.jl",
     devbranch="master",
 )
-=#
