@@ -1,7 +1,14 @@
-# TableSkill.jl
+```@meta
+CurrentModule = TableSkill
+```
 
-Documentation for TableSkill.jl
+# TableSkill
 
-```@docs
-tableskill
+Documentation for [TableSkill](https://github.com/klwlevy/TableSkill.jl).
+
+```@index
+```
+
+```@autodocs
+Modules = [TableSkill]
 ```
