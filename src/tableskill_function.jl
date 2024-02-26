@@ -2,12 +2,11 @@
 
     FUNCTION: tableskill
     AUTHOR: Walter Levy
-    DATE: 2023-09-10
+    DATE: 2024-02-26
 
     DESCRIPTION ----------------------------------------------------------------------------------------------------
 
-        Exports any tables.jl source (for example a dataframe) to a csv file in a temp folder,
-        suitable for viewing in tableskill
+        Export DataFrames to csv files, suitable for viewing in TableSKILL.
 
     INPUT ----------------------------------------------------------------------------------------------------------
 
@@ -15,7 +14,7 @@
             ;
           * dataframe_dict::Dict{String, DataFrame} = Dict("dataframe_name" => DataFrame()),
             sub_folder_in_export::String = "",
-            root_folder::String = "C:/Users/B046326/Levy/temp/tableskill_demo"
+            root_folder::String = "/temp/tableskill_demo"
         )
 
           * = mandatory
@@ -75,13 +74,6 @@ function tableskill(
     #println("root_folder = $(root_folder)")
 
 ### SET CONSTANTS ------------------------------------------------------------------------------------------------------
-    # Emergency solution for DS server (on linux) - note that this makes intended use of function argument
-    #   root_folder inuasable
-    if Sys.islinux()
-        #root_folder =  "/laufwerk_BAM_DSS_Data/02_Output/Levy/temp/" * Dates.format(Dates.today(), "yyyymmdd")
-        root_folder =  "/laufwerk_BAM_DSS_Data/02_Output/" * ENV["JULIA_USER_SURNAME"] * "/temp/" *
-            Dates.format(Dates.today(), "yyyymmdd")
-    end
     export_folder = joinpath(root_folder, sub_folder_in_export)
 
 ### EXPORT DATA TO CSV -------------------------------------------------------------------------------------------------
