@@ -20,13 +20,15 @@ using TableSkill, DataFrames
 my_df1 = DataFrame(x = 42, y = 1:10, z = "hello")
 my_df2 = DataFrame(x = 42, y = 1:10, z = "world")
 
-tableskill(
-    dataframe_dict = Dict(
-        "1 my_df1" => my_df1,
-        "2 my_df2" => my_df2,
-    ),
-    sub_folder_in_export = "my_folder",
-)
+withenv("JULIA_USER_SURNAME"=>"levy") do
+    tableskill(
+        dataframe_dict = Dict(
+            "1 my_df1" => my_df1,
+            "2 my_df2" => my_df2,
+        ),
+        sub_folder_in_export = "my_folder",
+    )
+end
 
 nothing #hide
 ```
