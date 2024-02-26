@@ -6,6 +6,8 @@ CurrentModule = TableSkill
 
 Documentation for [TableSkill.jl](https://github.com/klwlevy/TableSkill.jl).
 
+![Enter a descriptive caption for the image](figures/screen_video.mp4)
+
 ```@autodocs
 Modules = [TableSkill]
 ```
